@@ -47,6 +47,7 @@ def run():
 
             try:
                 submission.reply(message)
+                print(f"Posted pre-game iguana to new game thread: {submission.id}")
             except praw.exceptions.APIException as e:
                 print(f"APIException while posting iguana to {submission.id}: {e}")
             except Exception as e:
