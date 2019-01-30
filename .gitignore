@@ -1,6 +1,7 @@
 # useless to commit
 .vscode
 __pycache__
+run.log
 
 # sneaky
 .env
