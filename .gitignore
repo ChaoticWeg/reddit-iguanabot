@@ -1,0 +1,10 @@
+# useless to commit
+.vscode
+__pycache__
+
+# sneaky
+.env
+*.ini
+
+# will get BIG eventually
+data/known_threads.json
