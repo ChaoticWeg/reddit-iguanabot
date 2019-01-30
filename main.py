@@ -30,7 +30,7 @@ def run():
             for comment in submission.comments:
                 if comment.author.id == bot.user.me().id:
                     print(f"Found game thread {submission.id} but I've already posted there! Making note...")
-                    
+
                     should_post = False
                     if not submission.id in known_threads:
                         known_threads.append(submission.id)
@@ -56,4 +56,8 @@ def run():
 
 if __name__ == "__main__":
     load_dotenv()
+
+    assert os.getenv('praw_site') is not None, "specify praw_site in .env or environment"
+    assert os.getenv('subreddit') is not None, "specify subreddit in .env or environment"
+
     run()
