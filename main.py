@@ -21,6 +21,8 @@ def run():
     print(subreddit)
 
     known_threads = data.load_json('data/known_threads.json')
+    if known_threads is None:
+        known_threads = []
 
     for submission in subreddit.new():
         should_post = True
